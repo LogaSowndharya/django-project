@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Data</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f3e3f3, #de45e8);
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+            background: rgb(251, 251, 251);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 2px solid rgb(0, 0, 0);
+        }
+
+        th {
+            background: rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background: rgb(232, 197, 232);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+{% if data %}
+    <h3>Stored Data</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        {% for x in data %}
+        <tr>
+            <td>{{ x.id }}</td>
+            <td>{{ x.name }}</td>
+            <td>{{ x.email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
+</body>
+</html>

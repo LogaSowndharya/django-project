@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interactive Login Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f3e3f3, #de45e8);
+            color: #252525;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #t2 {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            animation: fadeIn 2s;
+        }
+
+        #t1 {
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        input[type="submit"] {
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            background: #b86967;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #e00000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="t2">
+        <h1>Welcome to My Page</h1>
+        <h3>Login & Data Management</h3>
+    </div>
+
+    <div id="t1">
+        <form action="/firstapp/show/" method="GET">
+            <input type="number" name="id" placeholder="Enter ID" required>
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <br>
+            <input type="submit" name="action" value="Add">
+            <input type="submit" name="action" value="Delete">
+            <input type="submit" name="action" value="Update">
+            <input type="submit" name="action" value="Show">
+        </form>
+    </div>
+</body>
+</html>
